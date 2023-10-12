@@ -142,7 +142,7 @@ app.get("/products", async (req, res) => {
     }
 });
 
-//.................server listen part..............................
+//.................server listen part.....................................
 
 app.listen(PORT, async () => {
     try {
