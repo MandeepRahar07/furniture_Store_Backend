@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const serverless = require('serverless-http')
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -41,26 +42,26 @@ const authentication = (req,res,next)=>{
 
 
 app.post("/sign_up", async(req,res)=>{
-   const {name, email, password,phone} = req.body;
-   bcrypt.hash(password, process.env.BCRYPT_KEY,async function(err, hash) {
+  const {name, email, password,phone} = req.body;
+  bcrypt.hash(password, process.env.BCRYPT_KEY,async function(err, hash) {
 if(err){
-  res.send({ msg :"some worong gose, please recheck"});
+ res.send({ msg :"some worong gose, please recheck"});
 
 }
 else{
-  const data = await  UserModel.create({
-    email,
-    password : hash,
-    name
-  })
-  res.send(data);
+ const data = await  UserModel.create({
+   email,
+   password : hash,
+   name
+ })
+ res.send(data);
 }
 
-  });
+ });
 try{
 
 }catch(err){
-  console.log("something  wrong", err);
+ console.log("something  wrong", err);
 }
 })
 
@@ -126,12 +127,9 @@ app.get("/products", async (req, res) => {
       if(category){
  query.category = category;
       }
-
       if(type){
         query.type = type;
       }
-   
-
       let sortObject = { price: _order === "desc" ? -1 : 1 }
       console.log("_sort:", _sort);
       console.log("_order:", _order);
