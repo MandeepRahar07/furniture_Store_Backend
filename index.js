@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const serverless = require('serverless-http')
+
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
