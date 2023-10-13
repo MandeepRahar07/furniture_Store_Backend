@@ -9,6 +9,7 @@ Welcome to the Furniture Store Backend project! This backend application is buil
 
 # API Endpoints
 GET /products: Retrieve a list of furniture products.
+
 GET /products/chair: Retrieve a list of chairs.
 GET /users: Retrieve a list of successful signup users.
 GET /products/:id: Retrieve a specific furniture product by ID.
