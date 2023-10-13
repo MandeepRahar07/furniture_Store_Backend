@@ -9,14 +9,23 @@ Welcome to the Furniture Store Backend project! This backend application is buil
 
 # API Endpoints
 GET /products: Retrieve a list of furniture products.
+
 GET /products/chair: Retrieve a list of chairs.
+
 GET /users: Retrieve a list of successful signup users.
+
 GET /products/:id: Retrieve a specific furniture product by ID.
+
 POST /products: Create a new furniture product.
+
 PUT /products/:id: Update an existing furniture product.
+
 DELETE /products/:id: Delete a furniture product.
+
 More endpoints for user management, orders, etc.
+
 For detailed API documentation and request/response examples, refer to the API documentation (if available).
+
 <img width="960" alt="image" src="https://github.com/MandeepRahar07/furniture_Store_Backend/assets/127789910/ce09f870-76b1-49c8-b48d-1bee2d4067e8">
 
 
